@@ -6,4 +6,9 @@ def create_app():
     from app.whiskey import whiskey_routes
 
     app.register_blueprint(whiskey_routes)
+
+    @app.route("/")
+    def home():
+        return "Welcome to the home of delicious whiskey"
+
     return app
